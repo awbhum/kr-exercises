@@ -1,24 +1,15 @@
-# see LhCENSE file for copyright and license details.
-
-# file vars
-SRC = $(wildcard *.c)
-OBJ = $(SRC:.c=.o)
+# see LICENSE file for copyright and license details.
 
 include config.mk
 
-all: $(BIN)
+# subdirs
+DIRS = $(wildcard chapter*)
 
-$(BIN): %.c
-	@printf " [CC]\t\t$@\n"
-	@$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
-
-$(OBJ): $(SRC)
-
-$(BIN): $(OBJ)
-	@printf " [CCLD]\t\t$@\n"
-	@$(CC) $(OBJ) -o $@ $(LDFLAGS) $(LIBS)
+all:
+	@for i in $(DIRS); do $(MAKE) -C $$i; done
 
 clean:
-	rm -rf $(OBJ) $(BIN)
+	@for i in $(DIRS); do $(MAKE) -C $$i clean; done
 
 .PHONY: all clean
+
