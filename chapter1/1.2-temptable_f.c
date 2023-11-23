@@ -5,7 +5,7 @@
 /* print a table of conversions between fahrenheit and celsius */
 int main(void) {
     float fahr, cel;
-    float lower, upper, step;
+    int lower, upper, step;
 
     lower = 0;
     upper = 256;
