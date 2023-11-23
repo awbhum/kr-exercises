@@ -1,4 +1,4 @@
-# see LICENSE file for copyright and license details.
+# see ../LICENSE file for copyright and license details.
 
 include ../config.mk
 
