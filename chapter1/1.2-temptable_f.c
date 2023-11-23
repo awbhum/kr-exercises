@@ -15,7 +15,7 @@ int main(void) {
     printf("  F\t     C\n");
 
     for (fahr = lower; fahr <= upper; fahr+=step) {
-        cel = ((fahr - 32) * 5.0) / 9.0;
+        cel = (5.0/9.0) * (fahr - 32);
         printf("%3.0f\t%6.1f\n", fahr, cel);
     }
 }
