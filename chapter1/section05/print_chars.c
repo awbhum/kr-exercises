@@ -4,7 +4,7 @@
 
 /* copy input to output */
 int main(void) {
-    char c = getchar();
+    int c = getchar();
     while (c != EOF) {
         putchar(c);
         c = getchar();
