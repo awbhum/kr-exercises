@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 
+/* copy input to output */
 int main(void) {
-    char c;
+    char c = getchar();
     while (c != EOF) {
+        putchar(c);
         c = getchar();
-        if (c != EOF)
-            putchar(c);
     };
 }
