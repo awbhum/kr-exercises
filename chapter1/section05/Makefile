@@ -10,7 +10,7 @@ all: $(BIN)
 
 $(BIN): 
 	@printf " [CCLD]\t\t$@\n"
-	@$(CC) $@.c -o $@ $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+	@$(CC) $@.c -o $@ $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -Wno-parentheses
 
 clean:
 	rm -rf $(BIN)
