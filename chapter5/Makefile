@@ -3,16 +3,14 @@
 include ../config.mk
 
 # file vars
-SRC = $(wildcard *.c)
-BIN = $(SRC:.c=)
+DIRS = $(wildcard section*)
 
 all: $(BIN)
 
-$(BIN): 
-	@printf " [CCLD]\t\t$@\n"
-	@$(CC) $@.c -o $@ $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+all:
+	@for i in $(DIRS); do $(MAKE) -C $$i; done
 
 clean:
-	rm -rf $(BIN)
+	@for i in $(DIRS); do $(MAKE) -C $$i clean; done
 
 .PHONY: all clean
