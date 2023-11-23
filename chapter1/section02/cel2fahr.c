@@ -14,9 +14,11 @@ int main(void) {
     /* heading */
     printf("  C\t     F\n");
 
-    /* column header */
-    for (cel = lower; cel <= upper; cel+=step) {
+    /* run the loop */
+    cel = lower;
+    while (cel <= upper) {
         fahr = ((cel * 9.0) / 5.0) + 32.0;
         printf("%3.0f\t%6.1f\n", cel, fahr);
+        cel+=step;
     }
 }
