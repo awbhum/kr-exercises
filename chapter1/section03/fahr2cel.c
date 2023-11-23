@@ -9,6 +9,6 @@ int main(void) {
     /* column header */
     printf("  F\t     C\n");
 
-    for (fahr = 0; fahr <= 256; fahr+=8)
+    for (fahr = 0; fahr <= 256; fahr+=16)
         printf("%3d\t%6.1f\n", fahr, (5.0/9.0) * (fahr - 32.0));
 }
