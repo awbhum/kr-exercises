@@ -12,10 +12,10 @@ int main(void) {
     step = 16;
 
     /* column header */
-    printf("F\tC\n");
+    printf("  F\t   C\n");
 
     for (fahr = lower; fahr <= upper; fahr+=step) {
         cel = ((fahr - 32) * 5) / 9;
-        printf("%d\t%d\n", fahr, cel);
+        printf("%3d\t%4d\n", fahr, cel);
     }
 }
