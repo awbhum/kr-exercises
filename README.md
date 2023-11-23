@@ -12,3 +12,4 @@ My completion of the exercises in *The C Programming Language, 2nd edition* (Bri
 - [x] [1-8](chapter1/section05/count_ws.c)
 - [x] [1-9](chapter1/section05/truncate_ws.c)
 - [x] [1-10](chapter1/section05/print_escapes.c)
+- [x] [1-11](chapter1/section05/test_wordcount.sh)
